@@ -17,7 +17,7 @@ session_start();
 </head>
 
 <body>
-    <h1>The PHP Sandbox</h1>
+    <h1>🐘 PHP Sandbox</h1>
     <canvas id="particle-canvas"></canvas>
     <div class="toggle-dark-mode" onclick="toggleDarkMode()">🌙</div>
     <br>
