@@ -1,0 +1,128 @@
+body {
+    font-family: "SF Pro Text", "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "SF Pro Display", "Segoe UI", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card {
+    flex: 1 0 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-clicked {
+    animation: grow 0.2s ease-in-out;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.card.dark-mode {
+    background-color: #333;
+    border-color: #666;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.card.dark-mode:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.card-clicked.dark-mode {
+    animation: grow-dark 0.2s ease-in-out;
+}
+
+@keyframes grow-dark {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.toggle-dark-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
